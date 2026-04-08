@@ -114,6 +114,22 @@
         </div>
 
         <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+    <h3>UI Automation Strategy for Hardware-Bound Enterprise Application</h3>
+    <p><strong>The Challenge:</strong> The internal enterprise application initially lacked support for UI automation. This posed a significant bottleneck for core hardware automation testing, where the vast majority of test scenarios involved UI interactions. This was particularly tricky because the platform operates as a UI-based application designed specifically for manual execution by QA and BA teams using CRUD semantics, rather than a traditional testing framework.</p>
+    <p><strong>The Solution:</strong> To enable robust UI automation, I implemented a strategy leveraging a specialized hardware orchestration tool. This tool helps teams run tests on custom hardware via API workflows by supplying necessary environment parameters.</p>
+    <ul>
+        <li><strong>WebDriver Integration:</strong> Engineered Selenium WebDriver tests alongside corresponding workflow configurations.</li>
+        <li><strong>API Orchestration:</strong> Configured the enterprise application to invoke the orchestration tool's APIs, successfully passing workflow names and critical parameters.</li>
+        <li><strong>Result Processing:</strong> Enabled the orchestration tool to execute the Selenium scripts on the hardware and send the success or failure results back to the main application for further processing.</li>
+    </ul>
+    <p><strong>Business Impact:</strong></p>
+    <ul>
+        <li><strong>Broader Adoption:</strong> The successful enablement of UI automation led other internal projects to evaluate the application for their automation needs, expanding its usage across teams.</li>
+        <li><strong>Strategic Growth:</strong> Upcoming project onboardings will create opportunities to scale resources, ultimately driving growth and cross-functional collaboration.</li>
+    </ul>
+    </div>
+
+        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
             <h3>Testing Strategy Optimization for TP ICAP's tpVOL Platform</h3>
             <p><strong>Overview:</strong> tpVOL is a state-of-the-art currency pair trading platform designed by TP ICAP. It integrates Web, OpenFin, and FIX versions to streamline operations for various user bases across frontend and backend clients.</p>
             <p><strong>The Challenge:</strong> The project faced significant delays and high costs due to a heavy reliance on a licensed testing tool (VeriFix) and extensive manual efforts for regression testing. The absence of a structured, automated regression framework led to inefficient, error-prone deployment processes that impacted overall delivery quality.</p>
