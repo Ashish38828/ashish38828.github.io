@@ -15,12 +15,27 @@
             background-color: #fcfcfc;
         }
         header { 
+            display: flex; 
+            align-items: center; 
+            gap: 30px; 
             border-bottom: 2px solid #3498db; 
             padding-bottom: 1.5rem; 
             margin-bottom: 2rem; 
         }
+        .profile-img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 3px solid #3498db; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            flex: 1;
+        }
         h1 { 
             color: #2c3e50; 
+            margin-top: 0;
             margin-bottom: 0.2rem; 
             font-size: 2.5rem;
         }
@@ -95,17 +110,35 @@
         .button:hover { 
             background: #2980b9; 
         }
+        .case-study {
+            background: #fff; 
+            padding: 1.5rem; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+            border-left: 4px solid #3498db; 
+            margin-bottom: 1.5rem;
+        }
+        .award-block {
+            border-left: 4px solid #007acc; 
+            padding-left: 16px; 
+            margin: 20px 0;
+        }
+        .award-quote {
+            background-color: #f6f8fa; 
+            border-left: 4px solid #dfe2e5; 
+            padding: 16px; 
+            margin: 16px 0; 
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
-    
-    <header style="display: flex; align-items: center; gap: 30px; border-bottom: 2px solid #3498db; padding-bottom: 1.5rem; margin-bottom: 2rem;">
-        <img src="Ashish.jpg" alt="Ashish Sahu" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #3498db; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        
-        <div>
-            <h1 style="margin-top: 0;">Ashish Sahu</h1>
+
+    <header>
+        <div class="header-content">
+            <h1>Ashish Sahu</h1>
             <p class="subtitle">GenAI Full Stack Lead SDET & Architect</p>
-            <p style="margin-bottom: 0;">Visionary GenAI Full Stack Lead SDET & Architect with 13+ years of experience evolving from backend development to spearheading advanced quality engineering architectures. A specialist in GenAI implementation with hands-on expertise building and orchestrating automated pipelines across leading foundational models, including OpenAI, Google Vertex AI, and Anthropic Claude.</p>
+            <p style="margin-bottom: 0;">Visionary GenAI Full Stack Lead SDET & Architect with 13+ years of experience evolving from backend development to spearheading advanced quality engineering architectures. A specialist in GenAI implementation with hands-on expertise building and orchestrating automated pipelines across leading foundational models, including OpenAI, Google Vertex AI, and Anthropic Claude. Proven track record of designing autonomous AI agents, resolving critical project impasses, and driving massive efficiency gains across the Software Testing Life Cycle (STLC).</p>
             
             <div class="contact-info">
                 <span>📍 Bengaluru, India</span>
@@ -178,27 +211,27 @@
     <section>
         <h2>📊 Featured Case Studies</h2>
 
-        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
-    <h3>Transformational Leadership in Crisis Management</h3>
-    <p><strong>The Challenge:</strong> Tasked with stepping into the role of Team Lead to rescue the Binding Development team from a critical crisis within a challenging 3-week deadline[cite: 4]. The primary objectives were to stabilize delivery, restore EPAM's reputation, and rebuild customer confidence[cite: 4].</p>
-    
-    <p><strong>The Solution:</strong> Executed a proactive turnaround strategy focusing on process redesign and team optimization[cite: 5, 27].</p>
-    <ul>
-        <li><strong>Agile Workflow Adoption:</strong> Advocated for and successfully transitioned the team to a structured, sprint-based approach, aligning productivity improvements with the customer's business objectives[cite: 19, 20].</li>
-        <li><strong>Operational Enhancements:</strong> Improved task granularity to increase clarity and strengthened the code review framework to ensure adherence to high-quality standards[cite: 12, 13].</li>
-        <li><strong>Quality Compliance & Transparency:</strong> Rigorously reviewed FDDs, TDDs, and Change Lists to ensure alignment with Google standards, while initiating continuous feedback loops with Product Owners[cite: 24, 26].</li>
-        <li><strong>Hands-on Leadership:</strong> Fostered a collaborative environment to boost morale and earned team trust by successfully delivering complex stories alongside the engineers[cite: 16, 17].</li>
-    </ul>
-    
-    <p><strong>Business Impact:</strong></p>
-    <ul>
-        <li><strong>Competitor Displacement:</strong> By drastically outperforming competitor resources, the customer entrusted EPAM with full control of the project, establishing us as the sole vendor[cite: 33, 34, 36].</li>
-        <li><strong>Strategic Growth:</strong> Meeting tight deadlines and delivering exceptional outcomes directly allowed EPAM to ramp down competitor resources and secure complete project ownership[cite: 30, 31].</li>
-        <li><strong>Executive Recognition:</strong> This turnaround laid the foundation for sustainable long-term success [cite: 38] and resulted in winning the EPAM CEO Impact 2023 Award and direct Google Client Recognition[cite: 41, 47, 51].</li>
-    </ul>
-   </div>
+        <div class="case-study">
+            <h3>Transformational Leadership in Crisis Management</h3>
+            <p><strong>The Challenge:</strong> Tasked with stepping into the role of Team Lead to rescue the Binding Development team from a critical crisis within a challenging 3-week deadline. The primary objectives were to stabilize delivery, restore EPAM's reputation, and rebuild customer confidence.</p>
+            
+            <p><strong>The Solution:</strong> Executed a proactive turnaround strategy focusing on process redesign and team optimization.</p>
+            <ul>
+                <li><strong>Agile Workflow Adoption:</strong> Advocated for and successfully transitioned the team to a structured, sprint-based approach, aligning productivity improvements with the customer's business objectives.</li>
+                <li><strong>Operational Enhancements:</strong> Improved task granularity to increase clarity and strengthened the code review framework to ensure adherence to high-quality standards.</li>
+                <li><strong>Quality Compliance & Transparency:</strong> Rigorously reviewed FDDs, TDDs, and Change Lists to ensure alignment with Google standards, while initiating continuous feedback loops with Product Owners.</li>
+                <li><strong>Hands-on Leadership:</strong> Fostered a collaborative environment to boost morale and earned team trust by successfully delivering complex stories alongside the engineers.</li>
+            </ul>
+            
+            <p><strong>Business Impact:</strong></p>
+            <ul>
+                <li><strong>Competitor Displacement:</strong> By drastically outperforming competitor resources, the customer entrusted EPAM with full control of the project, establishing us as the sole vendor.</li>
+                <li><strong>Strategic Growth:</strong> Meeting tight deadlines and delivering exceptional outcomes directly allowed EPAM to ramp down competitor resources and secure complete project ownership.</li>
+                <li><strong>Executive Recognition:</strong> This turnaround laid the foundation for sustainable long-term success and resulted in winning the EPAM CEO Impact 2023 Award and direct Google Client Recognition.</li>
+            </ul>
+        </div>
         
-        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+        <div class="case-study">
             <h3>Shift-Left Testing Strategy & In-Sprint Automation</h3>
             <p><strong>The Challenge:</strong> Relying solely on mocked unit testing was insufficient to catch all bugs, forcing developers to depend on time-consuming manual testing in the autopush environment prior to release. This approach was inefficient, leading to delayed bug detection, higher costs for resolving issues late in the development cycle, and missed edge cases due to inconsistent manual efforts. Furthermore, the absence of a robust automated framework hindered the achievement of seamless CI/CD workflows.</p>
             <p><strong>The Solution:</strong> To resolve these inefficiencies, I implemented a Shift-Left strategy leveraging "TIN," a specialized platform designed for hermetic functional testing. This provided an isolated and controlled environment to guarantee consistent and deterministic test results.</p>
@@ -216,7 +249,7 @@
             </ul>
         </div>
 
-        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+        <div class="case-study">
             <h3>UI Automation Strategy for Hardware-Bound Enterprise Application</h3>
             <p><strong>The Challenge:</strong> The internal enterprise application initially lacked support for UI automation. This posed a significant bottleneck for core hardware automation testing, where the vast majority of test scenarios involved UI interactions. This was particularly tricky because the platform operates as a UI-based application designed specifically for manual execution by QA and BA teams using CRUD semantics, rather than a traditional testing framework.</p>
             <p><strong>The Solution:</strong> To enable robust UI automation, I implemented a strategy leveraging a specialized hardware orchestration tool. This tool helps teams run tests on custom hardware via API workflows by supplying necessary environment parameters.</p>
@@ -232,7 +265,7 @@
             </ul>
         </div>
 
-        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+        <div class="case-study">
             <h3>Testing Strategy Optimization for TP ICAP's tpVOL Platform</h3>
             <p><strong>Overview:</strong> tpVOL is a state-of-the-art currency pair trading platform designed by TP ICAP. It integrates Web, OpenFin, and FIX versions to streamline operations for various user bases across frontend and backend clients.</p>
             <p><strong>The Challenge:</strong> The project faced significant delays and high costs due to a heavy reliance on a licensed testing tool (VeriFix) and extensive manual efforts for regression testing. The absence of a structured, automated regression framework led to inefficient, error-prone deployment processes that impacted overall delivery quality.</p>
@@ -253,7 +286,7 @@
             </ul>
         </div>
 
-        <div style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3498db; margin-bottom: 1.5rem;">
+        <div class="case-study">
             <h3>Full-Stack Test Strategy for SaaS Lead Management</h3>
             <p><strong>Challenge:</strong> Architect a scalable, maintainable test automation strategy for a web-based SaaS platform encompassing UI flows and protected REST APIs.</p>
             <p><strong>My Approach as Lead SDET:</strong></p>
@@ -271,12 +304,12 @@
     <section>
         <h2>🏆 Top Honours &amp; Achievements</h2>
 
-        <div style="border-left: 4px solid #007acc; padding-left: 16px; margin: 20px 0;">
+        <div class="award-block">
             <h3 style="margin-bottom: 4px;">CEO Award: EPAM Impact 2023</h3>
             <p style="margin-top: 0; font-style: italic; color: #666;">
                 Category: Impact on Clients and Technology
             </p>
-            <blockquote style="background-color: #f6f8fa; border-left: 4px solid #dfe2e5; padding: 16px; margin: 16px 0; border-radius: 6px;">
+            <blockquote class="award-quote">
                 <p style="font-style: italic; margin-bottom: 12px; line-height: 1.5;">
                     "Ashish, thank you for your <strong>adept handling of the crisis, streamlining of delivery and engineering processes</strong>, and leading the team through tough times. Management of key stakeholders went a long way in <strong>restoring customer trust</strong> and strengthening our reputation as a trusted partner. Your commitment to <strong>fostering a learning culture</strong> and driving project success is truly commendable. Well done!"
                 </p>
@@ -286,12 +319,12 @@
             </blockquote>
         </div>
 
-        <div style="border-left: 4px solid #007acc; padding-left: 16px; margin: 20px 0;">
+        <div class="award-block">
             <h3 style="margin-bottom: 4px;">EPAM Best Performer 2023 &amp; 2024</h3>
             <p style="margin-top: 0; font-style: italic; color: #666;">
                 EPAM Systems Recognition
             </p>
-            <blockquote style="background-color: #f6f8fa; border-left: 4px solid #dfe2e5; padding: 16px; margin: 16px 0; border-radius: 6px;">
+            <blockquote class="award-quote">
                 <p style="font-style: italic; margin-bottom: 12px; line-height: 1.5;">
                     "In recognition of your <strong>outstanding contribution</strong> and <strong>unparalleled dedication</strong>."
                 </p>
@@ -301,12 +334,12 @@
             </blockquote>
         </div>
 
-        <div style="border-left: 4px solid #007acc; padding-left: 16px; margin: 20px 0;">
-            <h3 style="margin-bottom: 4px;">Google Project Triumph Champion 2025</h3>
+        <div class="award-block">
+            <h3 style="margin-bottom: 4px;">Google Project Triumph Champion</h3>
             <p style="margin-top: 0; font-style: italic; color: #666;">
                 EPAM Google Account Recognition
             </p>
-            <blockquote style="background-color: #f6f8fa; border-left: 4px solid #dfe2e5; padding: 16px; margin: 16px 0; border-radius: 6px;">
+            <blockquote class="award-quote">
                 <p style="font-style: italic; margin-bottom: 12px; line-height: 1.5;">
                     "Congratulations Google Account Project Triumph Champions! Your dedication and effort were recognized as the most <strong>creative, challenging and impactful</strong>! Thank you for bringing <strong>engineering excellence</strong> to EPAM customers."
                 </p>
@@ -316,12 +349,12 @@
             </blockquote>
         </div>
         
-        <div style="border-left: 4px solid #007acc; padding-left: 16px; margin: 20px 0;">
+        <div class="award-block">
             <h3 style="margin-bottom: 4px;">Thank You from Client! — "Going Above and Beyond" (2022 &amp; 2023)</h3>
             <p style="margin-top: 0; font-style: italic; color: #666;">
                 Google, EPAM Customer
             </p>
-            <blockquote style="background-color: #f6f8fa; border-left: 4px solid #dfe2e5; padding: 16px; margin: 16px 0; border-radius: 6px;">
+            <blockquote class="award-quote">
                 <p style="font-style: italic; margin-bottom: 12px; line-height: 1.5;">
                     "We are grateful for your diligent work and commitment! You <strong>rescued the E2E bindings team</strong> and aided us in demonstrating that we can <strong>include more engineers from your location</strong> in the project. You have done exemplary work!"
                 </p>
@@ -333,7 +366,6 @@
                 </footer>
             </blockquote>
         </div>
-        
     </section>
 
     <section>
