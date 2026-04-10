@@ -246,17 +246,29 @@
         <h2>🧠 Featured GenAI Architectures</h2>
 
         <div class="case-study">
+            <h3>RAG-Powered API Knowledge Engine</h3>
+            <p><strong>The Challenge:</strong> QA engineers waste hours cross-referencing outdated specifications to build backend test payloads, but feeding proprietary API documentation into public LLMs violates strict enterprise data privacy policies.</p>
+            
+            <p><strong>The Architecture:</strong> Engineered an enterprise-grade Retrieval-Augmented Generation (RAG) backend using <strong>Java, LangChain4j, and ChromaDB</strong> to power autonomous test generation with zero data leakage.</p>
+            <ul>
+                <li><strong>Secure Ingestion:</strong> Built a data pipeline to parse raw API markdown, chunk it securely with semantic overlap, and convert it into dense vector embeddings.</li>
+                <li><strong>Localized Vector Storage:</strong> Orchestrated a containerized ChromaDB instance via Docker to store context locally, entirely avoiding external vector search costs.</li>
+                <li><strong>Contextual Retrieval:</strong> Designed a strict prompt-engineering layer that queries the vector store and forces the LLM to generate test payloads strictly from the retrieved, verified context—eliminating AI hallucinations at the source.</li>
+            </ul>
+            <p><a href="https://github.com/Ashish38828/rag-api-doc-orchestrator" target="_blank" style="font-weight: bold; text-decoration: underline;">View RAG Architecture on GitHub</a></p>
+        </div>
+
+        <div class="case-study">
             <h3>Agentic DOM-to-Playwright Synthesizer</h3>
             <p><strong>The Challenge:</strong> Traditional UI automation suffers from "selector fragility" and requires immense manual effort to maintain across rapid sprint cycles.</p>
             
-            <p><strong>The Architecture:</strong> Designed an autonomous, multi-agent AI pipeline utilizing <strong>Java, LangChain4j, and OpenAI (gpt-4o)</strong> to bring AI-driven resilience to test creation.</p>
+            <p><strong>The Architecture:</strong> Designed an autonomous, multi-agent AI pipeline utilizing <strong>Java, LangChain4j, and OpenAI</strong> to bring AI-driven resilience to test creation.</p>
             <ul>
                 <li><strong>Locator Agent:</strong> Orchestrated a deterministic AI agent to dynamically analyze raw DOM structures and identify highly resilient, enterprise-compliant selectors (prioritizing ARIA roles and test-ids).</li>
                 <li><strong>Synthesis Agent:</strong> Implemented a secondary agent to translate user intent into production-ready Playwright Java code based on the optimized locators.</li>
                 <li><strong>Microservice Foundation:</strong> Deployed the core LangChain4j engine as a scalable, Log4j2-monitored Java application, building the foundation for future CI/CD and Chrome Extension integrations.</li>
             </ul>
-            
-            <p><a href="https://github.com/Ashish38828/agentic-playwright-synth" target="_blank" style="font-weight: bold; text-decoration: underline;">View GenAI Architecture on GitHub</a></p>
+            <p><a href="https://github.com/Ashish38828/agentic-playwright-synth" target="_blank" style="font-weight: bold; text-decoration: underline;">View Agentic Architecture on GitHub</a></p>
         </div>
 
         <div class="case-study">
@@ -269,7 +281,6 @@
                 <li><strong>Pipeline Integration:</strong> Integrated the evaluation framework seamlessly with JUnit 5. If a hallucination score exceeds the enterprise threshold (e.g., > 0.2), the system throws a Runtime Exception, instantly blocking the Jenkins/GitHub Actions deployment.</li>
                 <li><strong>Enterprise Governance:</strong> Shifted AI from an experimental feature to a governed architecture by replacing manual prompt reviews with automated, measurable safety gates prior to production releases.</li>
             </ul>
-            
             <p><a href="https://github.com/Ashish38828/llm-eval-quality-gate" target="_blank" style="font-weight: bold; text-decoration: underline;">View Gatekeeper Architecture on GitHub</a></p>
         </div>
     </section>
