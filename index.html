@@ -261,7 +261,16 @@
 
         <div class="case-study">
             <h3>LLM Evaluation & Hallucination Gatekeeper</h3>
-            <p><em>Architecture details and repository coming soon...</em></p>
+            <p><strong>The Challenge:</strong> Traditional QA frameworks are deterministic and cannot mathematically prove if an LLM is hallucinating, being toxic, or providing ungrounded answers in a production RAG pipeline.</p>
+            
+            <p><strong>The Architecture:</strong> Engineered an AI-native "LLM-as-a-Judge" evaluation layer built in <strong>Java and LangChain4j</strong> to act as a strict CI/CD quality gate.</p>
+            <ul>
+                <li><strong>Deterministic Scoring:</strong> Hardcoded the Evaluator LLM to a temperature of 0.0 to mathematically calculate Context Groundedness and Hallucination rates, ensuring zero variance in test results.</li>
+                <li><strong>Pipeline Integration:</strong> Integrated the evaluation framework seamlessly with JUnit 5. If a hallucination score exceeds the enterprise threshold (e.g., > 0.2), the system throws a Runtime Exception, instantly blocking the Jenkins/GitHub Actions deployment.</li>
+                <li><strong>Enterprise Governance:</strong> Shifted AI from an experimental feature to a governed architecture by replacing manual prompt reviews with automated, measurable safety gates prior to production releases.</li>
+            </ul>
+            
+            <p><a href="https://github.com/Ashish38828/llm-eval-quality-gate" target="_blank" style="font-weight: bold; text-decoration: underline;">View Gatekeeper Architecture on GitHub</a></p>
         </div>
     </section>
 
