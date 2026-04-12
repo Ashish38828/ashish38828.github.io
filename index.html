@@ -272,6 +272,19 @@
         </div>
 
         <div class="case-study">
+            <h3>AI-Powered ATS Pre-Screening Engine</h3>
+            <p><strong>The Challenge:</strong> Evaluating candidate resumes against complex technical job descriptions is highly subjective, and standard LLM prompts return unstructured text that cannot be ingested by downstream enterprise systems.</p>
+            
+            <p><strong>The Architecture:</strong> Engineered an enterprise-grade Automated Tracking System (ATS) evaluation engine using <strong>Java and LangChain4j (AiServices)</strong> to mathematically score candidates.</p>
+            <ul>
+                <li><strong>Multi-Agent Orchestration:</strong> Split the evaluation process into specialized agents for requirement extraction, semantic matching, and gap analysis.</li>
+                <li><strong>Structured Output Parsing:</strong> Bound the LLM strictly to a Java POJO (Plain Old Java Object), forcing the AI to return deterministic, machine-readable JSON containing exact match percentages, strong skills, and critical technical gaps.</li>
+                <li><strong>Business Workflow Automation:</strong> Demonstrated the ability to abstract complex prompt engineering into clean, maintainable Java interfaces, bridging the gap between non-deterministic GenAI and strict enterprise HR data structures.</li>
+            </ul>
+            <p><a href="https://github.com/Ashish38828/ai-ats-resume-evaluator" target="_blank" style="font-weight: bold; text-decoration: underline;">View ATS Evaluator Architecture on GitHub</a></p>
+        </div>
+
+        <div class="case-study">
             <h3>LLM Evaluation & Hallucination Gatekeeper</h3>
             <p><strong>The Challenge:</strong> Traditional QA frameworks are deterministic and cannot mathematically prove if an LLM is hallucinating, being toxic, or providing ungrounded answers in a production RAG pipeline.</p>
             
