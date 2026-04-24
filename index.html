@@ -256,11 +256,11 @@
             <h3>Multi-Agent AI Content Orchestrator (LangGraph & LangChain)</h3>
             <p><strong>The Challenge:</strong> Linear AI pipelines lack the ability to self-correct. A single hallucination or poor output can ruin the entire generation process, and standard workflows cannot dynamically pause for human review or loop back for revisions.</p>
             
-            <p><strong>The Architecture:</strong> Engineered a stateful, cyclic AI workflow using **Python, LangGraph, and LangChain** to coordinate distinct agent personas (Researcher, Writer, Editor) that autonomously collaborate to generate technical content.</p>
+            <p><strong>The Architecture:</strong> Engineered a stateful, cyclic AI workflow using <strong>Python, LangGraph, and LangChain</strong> to coordinate distinct agent personas (Researcher, Writer, Editor) that autonomously collaborate to generate technical content.</p>
             <ul>
                 <li><strong>Cyclic Graph Orchestration:</strong> Replaced standard linear pipelines with LangGraph, allowing agents to iteratively critique and rewrite content until it passes strict guidelines.</li>
                 <li><strong>Human-in-the-Loop (HITL):</strong> Implemented a memory checkpointer that explicitly pauses execution, allowing users to manually review drafts, inject feedback, and dynamically update the workflow state before proceeding.</li>
-                <li><strong>Multi-Model Context Gathering:</strong> Engineered a Research Subagent to dynamically query OpenAI, Anthropic Claude, and Google Gemini APIs to aggregate diverse perspectives prior to the drafting phase.</li>
+                <li><strong>Multi-Model API Orchestration:</strong> Engineered a Research Subagent to dynamically and simultaneously query <strong>OpenAI (GPT-4o), Anthropic (Claude 3.7 Sonnet), and Google (Gemini 2.5 Pro)</strong> APIs to aggregate diverse, cutting-edge perspectives prior to the drafting phase.</li>
             </ul>
             <p><a href="https://github.com/Ashish38828/ai-blog-workflow" target="_blank" style="font-weight: bold; text-decoration: underline;">View LangGraph Architecture on GitHub</a></p>
         </div>
