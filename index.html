@@ -259,6 +259,19 @@
         <h2>🧠 Featured GenAI Architectures</h2>
 
         <div class="case-study">
+            <h3>Enterprise Multi-Agent AI Orchestrator (LangGraph & LangChain)</h3>
+            <p><strong>The Challenge:</strong> Standard, linear AI pipelines lack self-correction capabilities. A single hallucination can compromise the entire output, and rigid workflows fail to accommodate dynamic human review or iterative revisions.</p>
+    
+            <p><strong>The Architecture:</strong> Engineered a stateful, cyclic multi-agent pipeline using <strong>Python, LangGraph, and LangChain</strong> to coordinate distinct agent personas (Researcher, Writer, Editor) that autonomously collaborate to generate high-fidelity technical content.</p>
+            <ul>
+                <li><strong>Cyclic Graph Orchestration:</strong> Replaced linear execution with LangGraph routing, enabling agents to iteratively critique, rewrite, and refine content until strict quality thresholds are met.</li>
+                <li><strong>Human-in-the-Loop (HITL) Checkpointing:</strong> Implemented memory states that explicitly pause the workflow, allowing users to manually review drafts, inject feedback, and dynamically update the context before proceeding.</li>
+                <li><strong>Multi-Model API Routing:</strong> Developed a Research Subagent that dynamically queries <strong>OpenAI (GPT-4o), Anthropic (Claude 3.7 Sonnet), and Google (Gemini 2.5 Pro)</strong> simultaneously to aggregate diverse, cutting-edge perspectives prior to the drafting phase.</li>
+            </ul>
+            <p><a href="https://github.com/Ashish38828/ai-blog-workflow" target="_blank" style="font-weight: bold; text-decoration: underline;">View LangGraph Architecture on GitHub</a></p>
+        </div>
+        
+        <div class="case-study">
             <h3>Multi-Agent AI Content Orchestrator (LangGraph & LangChain)</h3>
             <p><strong>The Challenge:</strong> Linear AI pipelines lack the ability to self-correct. A single hallucination or poor output can ruin the entire generation process, and standard workflows cannot dynamically pause for human review or loop back for revisions.</p>
             
